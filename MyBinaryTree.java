@@ -6,9 +6,9 @@ public class MyBinaryTree<K extends Comparable<K>> {
 	public void add(K key) {
 		this.root = addRecursively(root, key);
 	}
-
+	
 	private MyBinaryNode<K> addRecursively(MyBinaryNode<K> current, K key) {
-		if (current == null)
+		if (current == null) 
 			return new MyBinaryNode<>(key);
 		int compareResult = key.compareTo(current.key);
 		if (compareResult == 0) {
@@ -17,15 +17,13 @@ public class MyBinaryTree<K extends Comparable<K>> {
 
 		if (compareResult < 0) {
 			current.left = addRecursively(current.left, key);
-			System.out.println("the root is " + root);
 		} else {
 			current.right = addRecursively(current.right, key);
-			System.out.println("the root is " + root);
 		}
 		return current;
 	}
 
-	public int getSize() {
+	 public int getSize() {
 		return getSizeRecursively(root);
 	}
 

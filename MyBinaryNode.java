@@ -15,4 +15,6 @@ public class MyBinaryNode<K extends Comparable<K>> {
 	public String toString() {
 		return "MyBinaryNode [key=" + key + ", left=" + left + ", right=" + right + "]";
 	}
+	
+	
 }
